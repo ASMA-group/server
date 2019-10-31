@@ -1,13 +1,28 @@
 const axios = require('axios')
 
-const axiosFlight = axios.create({
-    baseURL: `https://skyscanner-skyscanner-flight-search-v1.p.rapidapi.com/apiservices/browsequotes/v1.0`,
+const axiosLovePercent = axios.create({
+    baseURL: `https://love-calculator.p.rapidapi.com/getPercentage`,
     headers: {
-        "x-rapidapi-host": "skyscanner-skyscanner-flight-search-v1.p.rapidapi.com",
-        "x-rapidapi-key": `${process.env.FLIGHT_KEY}`
+        "X-RapidAPI-Key": "6f143477c1msha429b417057c1fbp13ae09jsn86c3718dc162",
+        "X-RapidAPI-Host": `${process.env.LOVE_HOST}`
     }
 })
 
+const axiosSimsimi = axios.create({
+    baseURL: `https://wsapi.simsimi.com/190410/talk`,
+    headers: {
+        "x-api-key": "D3l/HCavWU+1TUrcJSLCOYGV/gUaWpfjhKo5YbeA",
+        "Content-Type": "application/json"
+    }  
+})
+
+const axiosRandom = axios.create({
+    baseURL: `https://randomuser.me/api/?gender=`
+})
+
+
 module.exports = {
-    axiosFlight
+    axiosLovePercent,
+    axiosRandom,
+    axiosSimsimi
 }
