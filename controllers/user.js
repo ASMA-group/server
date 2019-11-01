@@ -9,8 +9,7 @@ class UserController {
         const { name, email, password } = req.body
         User.create({ name, email, password })
             .then(user => {
-               
-              res.status(201).json(user)
+                res.status(201).json(user)
             })
             .catch(next)
     }
@@ -25,7 +24,7 @@ class UserController {
                     }
 
                     let token = tokenGenerate(payload)
-                    res.status(200).json({ token })
+                    res.status(200).json({ token, username: user.name })
                 } else {
                     next({
                         status: 400,
@@ -66,7 +65,8 @@ class UserController {
                     id: user._id
                 })
                 res.status(201).json({
-                    token
+                    token,
+                    username: user.name
                 })
             })
             .catch(next)
