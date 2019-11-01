@@ -11,7 +11,7 @@ const axiosLovePercent = axios.create({
 const axiosSimsimi = axios.create({
     baseURL: `https://wsapi.simsimi.com/190410/talk`,
     headers: {
-        "x-api-key": "D3l/HCavWU+1TUrcJSLCOYGV/gUaWpfjhKo5YbeA",
+        "x-api-key": "d0AvjDl+Kg037gfJd8BmW1jqrF0M7yByu7MxZPhj",
         "Content-Type": "application/json"
     }  
 })
