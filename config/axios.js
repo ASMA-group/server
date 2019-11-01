@@ -13,7 +13,7 @@ const axiosSimsimi = axios.create({
     headers: {
         "x-api-key": "d0AvjDl+Kg037gfJd8BmW1jqrF0M7yByu7MxZPhj",
         "Content-Type": "application/json"
-    }  
+    }
 })
 
 const axiosRandom = axios.create({
